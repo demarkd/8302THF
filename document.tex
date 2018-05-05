@@ -235,18 +235,69 @@
 \newcommand{\tf}{\tilde f}
 \DeclareMathOperator{\gl}{GL}
 \DeclareMathOperator{\spn}{Span}
+\newcommand{\hdr}{H_{\mathrm{dR}}}
+\newcommand{\tosm}{\xrightarrow{\sim}}
+\newcommand{\oab}{\omega_{\alpha\beta}}
 \makeatletter
 \newcommand{\extp}{\@ifnextchar^\@extp{\@extp^{\,}}}
 \def\@extp^#1{\mathop{\bigwedge\nolimits^{\!#1}}}
 \makeatother
 \begin{document}
 \maketitle
-\prob{1}
+\prob{1} We let $f:S^2\to T^2$ be any smooth map.
 \prt{1}
+We recall that by de Rahm's theorem, we have an isomorphism of rings $\Psi:\hdr^*(T^2)\tosm H^*(T^2,\RR)$. As we showed in class last semester (or can be found in Hatcher), $H^*(T^2, \RR)$  is generated in degree one by $[\alpha],[\beta]\in H^1(T^2)$ under the relations $\idl{[\alpha]\cup[\beta]+[\beta]\cup[\alpha],[\alpha]^2,[\beta]^2}$. In particular, we have that $H^2(T^2,\RR)\cong \RR\{[\alpha]\cup [\beta]\}$. We let $[\omega_\alpha]=\Psi^{-1}([\alpha])$, and $[\omega_\beta]=\Psi^{-1}([\beta])$. We recall as well that $H^*(S^2,\RR)$ is generated in degree two by a single element $[\gamma]\in H^2(S^2,\RR)$ modulo the relation $\idl{[\gamma]\cup [\gamma]}$. We let $[\omega_\gamma]\in \hdr^2(S^2)$ be its image under de Rahm's theorem. We finally also recall that thanks to de Rahm's isomorphism of rings, the map $f^*$ induces a graded morphism of $\RR$-algebras.
+\begin{proposition*}
+	For any closed $\omega\in \Omega^2(T^2)$, $f^*(\omega)\in \Omega^2(S^2)$ is exact.
+\end{proposition*}
+\begin{proof}
+We let $\omega\in \Omega^2(T^2)$ be an arbitrary closed $2$-form on $T^2$. We suppose for the sake of contradiction that $f^*(\omega)$ is not exact, that is $f^*([\omega])=r[\omega_\gamma]$ for some $0\neq r\in \RR$. Then, we have two cases to consider. If $\omega$ is exact, we have that $[\omega]=[0]$ in $H^2(T^2)$. Then, $f^*([0])\neq [0]$ contradicting that $f^*$ is a ring homomorphism. On the other hand, if $\omega$ is not exact, then $[\omega]=q[\omega_\alpha]\wedge [\omega_\beta]$ for some $0\neq q \in \RR$. Then, we have that $f^*(q[\omega_\alpha])\wedge f^*([\omega_\beta])=r[\omega_\gamma]$, but as $\hdr^1(S^2)=0$ and $f^*$ is a \emph{graded} homomorphism, we then have that $[0]\wedge [0]=r[\omega_\gamma]$, contradicting that $r\neq 0$. This completes our proof.
+\end{proof}
 \prt{2}
+\begin{proposition*}
+	$\deg f=0$. 
+\end{proposition*}
+\begin{proof}
+	As a corollary of de Rahm's theorem that we showed in class, for smooth path-connected $q$-manifolds $M,N$ with smooth $f:M\to N$, $\deg f$ can be calculated as the determinant of $f^*:\hdr^q(N)\to \hdr^q(M)$. As we showed above, $f^*\hdr^2(T^2)\to \hdr^2(S^2)$ is the zero map, and hence $\deg f=0$. 
+\end{proof}
 \prob{2}
+We let $f:\CC^2\to \CC$ be defined by $f(z,w)=w^2-z^3$, and let $X\subseteq \CC^2$ be defined by $X:=\{(z,w)\mid f(w,z)=c\}$.
 \prt{1}
+We use the diffeomorphism $\CC^2\tosm \RR^4$ by $(r+is,x+iy)\mapsto (r,s,x,y)$ and identify $\CC^2$ as $\RR^4$ as such (and similarly identify $\CC$ with $\RR^2$). Then, $f:\RR^4\to \RR^2$ can be given new coordinates as \[f(r,s,x,y)=(x^2-y^2-r^3+3rs^2,2xy-3r^2s+s^3).\] Then, letting $c=a+ib$, $X$ is defined as $X=X_c:=\{(r,s,x,y)\mid f(r,s,x,y)=(a,b)\}$
+\begin{proposition*}
+	For any $(a,b)\neq (0,0)$, $X_c$ is a smooth manifold.
+\end{proposition*}
+ As $f$ is a smooth map with Euclidean domain and codomain, we may compute $\d f_{P}$ as the Jacobian of $f$ at $P=(r,s,x,y)$. Doing so yields the following:
+\[\d f_P=\begin{bmatrix}
+3(s^2-r^2)&6rs&2x&-2y\\
+-6rs&3(s^2-r^2)&2y&2x
+\end{bmatrix}\]  
+We have that $c=(a,b)\in \RR^2$ is a critical value if for some $P=(r,s,x,y)$ with $f(P)=c$, the derivative $\d f_P$ fails to be surjective, i.e. its maximal minors are identically zero. In particular, if $P$ is a critical point, this forces the relations $\Delta_{12}(\d f_P)=9(s^2-r^2)^2+36r^2s^2=9(s^2+r^2)^2=0$ and $\Delta_{34}(\d f_P)=4(x^2+y^2)=0$. As $r,s,x,y$ are \textbf{real} coordinates, these two relations force $(r,s,x,y)=\avec{0}$. Hence, $\avec{0}\in \RR^4$ is the only critical point of $f$, and $\avec{0}\in \RR^2$ its corresponding critical value. By the regular value theorem, for $c=(a,b)\neq (0,0)$, we have that $X_c$ is a smooth manifold of dimension $\dim \RR^4-\dim \RR^2=2$.
 \prt{2}
+We let\footnote{Oops, I'm changing names on you\textemdash my bad.} $g:\CC^2\to \CC$ be defined by $g(z,w)=w$. Under our change of coordinates above, this is the map $g:\RR^4\to \RR^2$ defined by $g(r,s,x,y)=(x,y)$. 
+\begin{proposition*}
+	The critical points of $g$ are exactly the plane $r=s=0$. 
+\end{proposition*}
+\begin{proof}
+	We have by a proposition on page 24 of Guillemin-Pollack that $T_PX=\ker \d f_P$. Assuming that $P\neq \avec{0}$ (justified by part a), we compute manually that 
+	\[\ker \d f_P\supseteq \spn\left\{v_1=\begin{bmatrix}
+	2x\\2y\\-3(s^2-r^2)\\6rs
+	\end{bmatrix},v_2=\begin{bmatrix}
+	2y\\-2x\\6rs\\3(s^2-r^2)
+	\end{bmatrix}\right\}\]
+	We note that the linear independence of $v_1$ and $v_2$ can be checked by computing the rank of the matrix $\begin{bmatrix} v_1&v_2\end{bmatrix}$. Doing so reveals the same maximal minors as $\d f_P$, implying that $v_1$ and $v_2$ span the tangent space at $P$ for any $P\in X$ by part a. We take $v_1$ and $v_2$ to be a basis for $T_PX$. Then, the inclusion map $i:T_PX\to T_P\RR^4$ is given by $i(v)=\begin{bmatrix}
+	v_1&v_2
+	\end{bmatrix}v$. We let $h$ be the extension of $g$ to all of $\RR^4$ given coordinate-wise by the same formula as $g$. Then, we may compute $\d h_P$ as \[\d h_P=\begin{bmatrix}
+	0&0&1&0\\0&0&0&1
+	\end{bmatrix}. \] Furthermore, we have that $g=h\circ i$ and thus $\d g_P=\d h_{i(P)}\d i_P$. We compute \[\d g_P=(\d h_{i(P)}\circ\d i_P)(v)=\begin{bmatrix}
+	0&0&1&0\\0&0&0&1
+	\end{bmatrix}\begin{bmatrix}
+	2x&2y\\2y&-2x\\-3(s^2-r^2)&6rs\\6rs&3(s^2-r^2)
+	\end{bmatrix}v=\begin{bmatrix}
+	-3(s^2-r^2)&6rs\\6rs&3(s^2-r^2)
+	\end{bmatrix}v \]
+	We have that $P$ is a critical point of $g$ if $\d g_P$ fails to be surjective, i.e. fails to be an isomorphism. We compute $\det \d g_P=9(s^2+r^2)^2$ and have that $\det \d g_P=0\iff (s,r)=(0,0)$. As $\det \d g_P=0$ if and only if $P$ is a critical point, this proves our claim.
+\end{proof}
 \prob{3}
 \prob{4}
 \prt{1}
