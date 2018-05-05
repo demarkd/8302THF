@@ -143,7 +143,7 @@
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem*{prompt*}{Prompt}
 \newtheorem*{claim*}{Claim}
-\newtheorem{claim}{Claim}
+\newtheorem{claim}[theorem]{Claim}
 %\newcommand{\claim}[1]{\begin{claim*} #1\end{claim*}}
 %organizing theorem environments by style--by the way, should we really have definitions (and notations I guess) in proposition style? it makes SO much of our text italicized, which is weird.
 \theoremstyle{remark}
@@ -299,6 +299,30 @@ We let\footnote{Oops, I'm changing names on you\textemdash my bad.} $g:\CC^2\to 
 	We have that $P$ is a critical point of $g$ if $\d g_P$ fails to be surjective, i.e. fails to be an isomorphism. We compute $\det \d g_P=9(s^2+r^2)^2$ and have that $\det \d g_P=0\iff (s,r)=(0,0)$. As $\det \d g_P=0$ if and only if $P$ is a critical point, this proves our claim.
 \end{proof}
 \prob{3}
+\begin{proposition*}
+	If $\omega$ is a closed 2-form on $S^4$, then $\omega\wedge\omega$ vanishes somewhere on $S^4$.
+\end{proposition*}
+\begin{proof}
+We break our proof into a series of claims.\begin{claim}
+	$\omega \wedge \omega$ is closed
+\end{claim}
+\begin{subproof}
+We write $d(\omega\wedge \omega)=d\omega\wedge \omega+\omega\wedge d\omega=0\wedge\omega +\omega \wedge 0=0.$
+\end{subproof}
+\begin{claim}
+$\omega \wedge \omega$ is exact.
+\end{claim}
+\begin{subproof}
+	We recall that de Rahm's isomorphism $\Psi:\hdr^*(S^4)\tosm H^*(S^4,\RR)$ induces a ring structure via the wedge product on $\hdr^*(S^4)$. We have that $\omega$ is necessarily exact as it is closed and $H^2(S^4)=0$. Thus, $[\omega]=[0]\in H^2(S^4)$, so if $[\omega\wedge\omega]\neq [0]$, we have that $0\neq[\omega\wedge\omega]= [\omega]\wedge [\omega]=[0]\wedge [0]=[0]$, a contradiction. Thus, $[\omega\wedge\omega]=[0]$ indeed, i.e. $\omega\wedge\omega$ is exact.
+\end{subproof}
+As an immediate corollary, as de Rahm's isomorphism works by integration on $\hdr^4(S^4)$, we have that $\int_{S^4}\omega \wedge \omega=0$.
+\begin{lemma}[Mean value theorem for smooth manfiolds]
+	If $M$ is a $d$-manifold and $\sigma\in\Omega^d(M)$ is exact, then there is some point $p\in M$ such that where $\omega=f(x)\d x_1\wedge \dots \wedge\d x_d$, $f(p)=0$. 
+\end{lemma}
+\begin{subproof}
+\todo{use the mean value theorem for integration}
+\end{subproof}
+\end{proof}
 \prob{4}
 \prt{1}
 \prt{2}
