@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.12.10)  6 MAY 2018 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.12.10)  6 MAY 2018 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**document.tex
-(./document.tex
+**8302THF.tex
+(./8302THF.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -1201,8 +1201,8 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count330
 \@quotereset=\count331
-(./document.aux)
-\openout1 = `document.aux'.
+(./8302THF.aux)
+\openout1 = `8302THF.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
 LaTeX Font Info:    ... okay on input line 247.
@@ -1294,16 +1294,16 @@ e
 Package biblatex Info: Input encoding 'latin9' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'latin9'.
-\openout5 = `document.bcf'.
+\openout5 = `8302THF.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'document.bbl' found.
-(./document.bbl)
+Package biblatex Info: ... file '8302THF.bbl' not found.
+No file 8302THF.bbl.
 Package biblatex Info: Reference section=0 on input line 247.
 Package biblatex Info: Reference segment=0 on input line 247.
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 248.
 
- (/usr/share/texmf/tex/latex/lm/omllmm.fd
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 248
@@ -1342,19 +1342,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 249.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./document.aux)
-Package logreq Info: Writing requests to 'document.run.xml'.
-\openout1 = `document.run.xml'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./8302THF.aux)
+Package logreq Info: Writing requests to '8302THF.run.xml'.
+\openout1 = `8302THF.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24172 strings out of 492990
- 455801 string characters out of 6135004
- 903136 words of memory out of 5000000
+ 24171 strings out of 492990
+ 455772 string characters out of 6135004
+ 903135 words of memory out of 5000000
  27271 multiletter control sequences out of 15000+600000
  53286 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,84p,895b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,84p,894b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmbxo10.pfb></usr/share/texmf/fonts/type1/publ
@@ -1369,7 +1369,7 @@ exlive/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on document.pdf (3 pages, 273450 bytes).
+Output written on 8302THF.pdf (3 pages, 273450 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
